@@ -6,7 +6,7 @@ public class exercicio01_lista_linear {
 	public static void main(String[] args) {
 
 		Scanner entrada=new Scanner(System.in);
-		int opc = 1;
+		int opc = -1;
 
 		ArrayList myList = new ArrayList();
 		
@@ -39,12 +39,12 @@ public class exercicio01_lista_linear {
 			if(opc==3) {
 				if(val==1) {
 					while(val!=0) {
-						System.out.print("Posiçao: ");
+						System.out.print("Valor: ");
 						val = entrada.nextInt();
 						if(val!=0) {
-							System.out.print("Valor: ");
+							System.out.print("Posição: ");
 							pos = entrada.nextInt();
-							myList.set(val, pos);
+							myList.set(pos, val);
 							System.out.println("(" + myList.size() + ") " + myList);	
 						}
 	
