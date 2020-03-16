@@ -1,30 +1,28 @@
 import java.util.*;
 
-public class Josephus {
+public class josephus {
 
 	public static void main(String[] args) {
-	    List<Integer> r;
-	    System.out.println(r = josephus(5, 3, 1));                     
-	    System.out.printf("Person %d is last\n", r.get(r.size() - 1));  
+		
+		 Scanner entrada = new Scanner(System.in);
+		
+		 int n,x,i,m;
+		 x=0;
+		 System.out.println("\n\n   SOLUCAO DO PROBLEMA DE JOSEPHUS \n\n");
+		 System.out.println("Entre com o numero de pessoas (n): ");
+		 n = entrada.nextInt();
+		    
+		 System.out.println("Entre com o valor do \"passo\" (m): ");
+		 m = entrada.nextInt();
+		 
+		 System.out.println("\n A sequencia de pessoas a serem mortas é:\n");
+		 for (i=1;i<=n;i++)
+		 {
+		    x=m*i; // se n fosse infinito seria a i-esima pessoa a ser morta
+		    while (x>n)  // ajusta x enquanto x > n
+		      x=(m*(x-n)-1)/(m-1); // arredonda para baixo!
+		    if(i==n){System.out.println("\n\n Pessoa Selecionada: " + x);}
+		    else{System.out.println("Pessoa removida: " + x);}
+		 }
 	}
-
-	// remove N elements in equal steps starting at specific point
-	static List<Integer> josephus(int N, int step, int start)
-	{
-	    if (N < 1 || step < 1 || start < 1) return null;
-
-	    List<Integer> p = new LinkedList<Integer>();
-	    for (int i = 0; i < N; i++)
-	        p.add(i+1);
-
-	    List<Integer> r = new LinkedList<Integer>();
-	    int i = (start - 2) % N;
-	    for (int j = N; j > 0; j--) {
-	        i = (i + step) % N--;
-	        r.add(p.remove(i--));
-	    }
-
-	    return r;
-	}
-	
 }
