@@ -4,6 +4,7 @@ public class Josephus {
     public static void main(String[] argv) 
     {
         List<Integer> r;
+        
         System.out.println(r = josephus(10, 3, 1));                    
         System.out.printf("Person %d is last\n", r.get(r.size() - 1));  
     }
