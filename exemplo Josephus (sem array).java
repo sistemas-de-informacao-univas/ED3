@@ -1,5 +1,4 @@
 //Solução Sem uso de Array
-
 import java.util.*;
 
 public class josephus {
