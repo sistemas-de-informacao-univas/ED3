@@ -15,14 +15,16 @@ public class josephus {
 		 System.out.println("Entre com o valor do \"passo\" (m): ");
 		 m = entrada.nextInt();
 		 
-		 System.out.println("\n A sequencia de pessoas a serem mortas é:\n");
-		 for (i=1;i<=n;i++)
-		 {
+		 System.out.println("\n A sequencia de eliminação é:\n");
+		 for (i=1;i<=n;i++){
 		    x=m*i; // se n fosse infinito seria a i-esima pessoa a ser morta
 		    while (x>n)  // ajusta x enquanto x > n
-		      x=(m*(x-n)-1)/(m-1); // arredonda para baixo!
-		    if(i==n){System.out.println("\n\n Pessoa Selecionada: " + x);}
-		    else{System.out.println("Pessoa removida: " + x);}
+		      	x=(m*(x-n)-1)/(m-1); // arredonda para baixo!
+			if(i==n){
+			   System.out.println("\n\nPessoa Selecionada: " + x);
+			}else{
+			   System.out.println("Pessoa Eliminada: " + x);
+			}
 		 }
 	}
 }
