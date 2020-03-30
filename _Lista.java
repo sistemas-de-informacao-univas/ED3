@@ -28,7 +28,7 @@ public class Lista {
 	
 	public void listar() {
 		if(inicio == null) {
-			System.out.println("N„o h· elementos na lista");
+			System.out.println("N√£o h√° elementos na lista");
 		}
 		else {
 			No aux = inicio;
