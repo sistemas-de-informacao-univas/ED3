@@ -1,5 +1,5 @@
 
-public class Principal {
+public class Encadeamento {
 
 	public static void main(String[] args) {
 		Lista lista = new Lista();
